@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Semester from './Semester';
+import AddingStudent from './AddingStudent';
 
 
 function Student (){
@@ -25,24 +26,16 @@ function Student (){
 
     },])
 
-    let added = 
-    {
-        StudentRollNo: '',
-        StudentDept : '',
-        StudentName : '',
-        CGPA : ''
-    }
+   
 
-    const  AddingStudent = () =>{
-        let newAddedStudentDetails = [...studentDetails,added];
-        setStudentDetails(newAddedStudentDetails)
-    }
+ 
 
     return(
         <div>
             <Semester student = {studentDetails}/>
-            <button className='btn btn-primary btn-md' onClick={AddingStudent}>Add Student </button>
-
+            <button className='btn btn-primary btn-md' > Add Student </button>
+            <AddingStudent/>
+            
         </div>
     )
 }
