@@ -10,15 +10,15 @@ class AddingStudent extends Component {
      }
 
 
-     change = e =>{
+     change = event =>{
          this.setState({
-             [e.target.name]: e.target.value
+             [event.target.name]: event.target.value
          });
      };
 
 
-     onSubmit = (e) => {
-         e.preventDefault();
+     onSubmit = (event) => {
+         event.preventDefault();
          console.log(this.state);
      }
 
@@ -32,7 +32,7 @@ class AddingStudent extends Component {
                 name="StudentRollNo"
                 placeholder="RollNo" 
                 value={this.state.StudentRollNo} 
-                onChange={e => this.change(e)}
+                onChange={event => this.change(event)}
                 />
                 <br/>
                  
@@ -40,7 +40,7 @@ class AddingStudent extends Component {
                 name="StudentName"
                 placeholder="Name"
                 value={this.state.StudentName} 
-                onChange={e => this.change(e)}
+                onChange={event => this.change(event)}
                 />
 
                 <br/>
@@ -49,7 +49,7 @@ class AddingStudent extends Component {
                 name="StudentDept"
                  placeholder="Department"
                  value={this.state.StudentDept}
-                 onChange={e=>this.change(e)}
+                 onChange={event=>this.change(event)}
                    />
                    <br/>
                   
@@ -57,10 +57,10 @@ class AddingStudent extends Component {
                 name="CGPA"
                 placeholder="CGPA" 
                  value={this.state.CGPA}
-                  onChange={e=>this.change(e)}
+                  onChange={event =>this.change(event)}
                   />
                   <br/>
-                <button className='btn btn-primary btn-md'  onClick={e => this.onSubmit(e)}> Submit </button>
+                <button className='btn btn-primary btn-md'  onClick={event => this.onSubmit(event)}> Submit </button>
             </form>
          );
     }
